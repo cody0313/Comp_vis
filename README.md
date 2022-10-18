@@ -32,5 +32,4 @@ Place haarcascade_frontalface_default.xml and main.py into the same folder
 - **PS:** After running the code it takes up to 1 gb memory to install needed files
 
 
-
 **!!!Stay tuned for future updates!!!**
