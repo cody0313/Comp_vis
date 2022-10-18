@@ -14,7 +14,7 @@ if not cam.isOpened():
 
 while True:
     ret,frame = cam.read()
-    result = DeepFace.analyze(frame, actions = ["emotion"])
+    result = DeepFace.analyze(frame, actions = ["emotion", "gender", "race"])
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -27,27 +27,20 @@ while True:
     font = cv2.FONT_HERSHEY_DUPLEX
 
 
-    #cv2.putText(frame,
-    #           result['gender'],
-    #           (100, 50),
-    #           font, 1,
-    #           (220, 0, 0),
-    #           1,
-    #           cv2.LINE_4)
-    #cv2.putText(frame,
-    #           result['age'],
-    #           (40, 50),
-    #           font, 1,
-    #           (220, 0, 0),
-    #           2,
-    #           cv2.LINE_4)
-    #cv2.putText(frame,
-    #           result['dominant_race'],
-    #           (100, 100),
-    #           font, 1,
-    #           (220, 0, 0),
-    #           1,
-    #           cv2.LINE_4)
+    cv2.putText(frame,
+               result['gender'],
+               (100, 50),
+               font, 1,
+               (220, 0, 0),
+               1,
+               cv2.LINE_4)
+    cv2.putText(frame,
+               result['dominant_race'],
+               (100, 100),
+               font, 1,
+               (220, 0, 0),
+               1,
+               cv2.LINE_4)
     cv2.putText(frame,
                result['dominant_emotion'],
                (100, 150),
