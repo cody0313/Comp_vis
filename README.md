@@ -19,9 +19,12 @@ Place haarcascade_frontalface_default.xml and main.py into the same folder
 
 
 **Before Running code don't forget to install libraries:**
+
   To install cv:
+  
             pip install opencv-python
   To install DeepFace:
+  
             pip install deepface
 
 
